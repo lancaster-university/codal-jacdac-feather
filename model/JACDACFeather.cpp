@@ -41,7 +41,8 @@ JACDACFeather::JACDACFeather() :
     timer(lowLevel),
     messageBus(),
     io(),
-    spi(io.pa7, io.pa6, io.pa5)
+    spi(io.mosi, io.miso, io.sck),
+    buttonA(io.buttonA, DEVICE_ID_BUTTON_A)
   {
     // Clear our status
     status = 0;

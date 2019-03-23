@@ -68,11 +68,12 @@ namespace codal
     class JACDACFeather : public CodalComponent
     {
         public:
-            STMLowLevelTimer lowLevel;
-            Timer         timer;
+            STMLowLevelTimer            lowLevel;
+            Timer                       timer;
             MessageBus                  messageBus;
-            JACDACFeatherIO                  io;
+            JACDACFeatherIO             io;
             ZSPI                        spi;
+            Button                      buttonA;
 
             /**
              * Constructor.

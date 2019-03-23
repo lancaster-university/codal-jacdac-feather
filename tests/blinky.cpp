@@ -10,7 +10,9 @@ int main()
 
     while(1)
     {
-        feather.io.led.setDigitalValue(state);
+        feather.io.ledRed.setDigitalValue(state);
+        feather.io.ledGreen.setDigitalValue(state);
+        feather.io.ledBlue.setDigitalValue(state);
         fiber_sleep(1000);
         state = !state;
     }

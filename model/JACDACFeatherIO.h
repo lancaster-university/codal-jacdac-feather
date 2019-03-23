@@ -49,42 +49,35 @@ namespace codal
     class JACDACFeatherIO
     {
         public:
-            ZPin pa[0];
-            ZPin pa0;
-            ZPin pa1;
-            ZPin pa2;
-            ZPin pa3;
-            ZPin pa4;
-            ZPin pa5;
-            ZPin pa6;
-            ZPin pa7;
-            ZPin pa8;
-            ZPin pa9;
-            ZPin pa10;
-            ZPin pa11;
-            ZPin pa12;
-            ZPin pa13;
-            ZPin pa14;
-            ZPin pa15;
-            ZPin pb[0];
-            ZPin pb0;
-            ZPin pb1;
-            ZPin pb2;
-            ZPin pb3;
-            ZPin pb4;
-            ZPin pb5;
-            ZPin pb6;
-            ZPin pb7;
-            ZPin pb8;
-            ZPin pb9;
-            ZPin pb10;
-            ZPin pb11;
-            ZPin pb12;
-            ZPin pb13;
-            ZPin pb14;
-            ZPin pb15;
+            ZPin pins[0];
+            ZPin a0;
+            ZPin a1;
+            ZPin a2;
+            ZPin a3;
+            ZPin a4;
+            ZPin a5;
+            ZPin sck;
+            ZPin mosi;
+            ZPin miso;
+            ZPin rx;
+            ZPin tx;
+            ZPin jacdac;
+            ZPin sda;
+            ZPin scl;
+            ZPin d5;
+            ZPin d6;
+            ZPin d9;
+            ZPin d10;
+            ZPin d11;
+            ZPin d12;
+            ZPin d13;
 
-            ZPin led;
+            ZPin ledRed;
+            ZPin ledGreen;
+            ZPin ledBlue;
+
+            ZPin jacdacEn;
+            ZPin buttonA;
 
             /**
              * Constructor.
