@@ -1,5 +1,5 @@
 {
-    "device":"STM32",
+    "device":"JACDAC",
     "processor":"STM32F1",
     "architecture":"CORTEX_M3",
     "toolchain":"ARM_GCC",
@@ -27,7 +27,7 @@
         "CODAL_TIMESTAMP":"uint64_t",
         "PROCESSOR_WORD_TYPE":"uint32_t"
     },
-    "definitions":"-DSTM32F1 -DSTM32F103xB -include codal-bluepill/inc/localconf.h",
+    "definitions":"-DSTM32F1 -DSTM32F103xB -include codal-jacdac-feather/inc/localconf.h",
     "cmake_definitions":{
     },
     "cpu_opts":"-mcpu=cortex-m3 -mthumb",

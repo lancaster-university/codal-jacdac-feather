@@ -22,8 +22,8 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 */
 
-#ifndef BIG_BluePill_H
-#define BIG_BluePill_H
+#ifndef JACDAC_FEATHER_H
+#define JACDAC_FEATHER_H
 
 #include "CodalHeapAllocator.h"
 #include "codal-core/inc/types/Event.h"
@@ -42,7 +42,7 @@ DEALINGS IN THE SOFTWARE.
 #include "MultiButton.h"
 //#include "MbedI2C.h"
 //#include "MbedSerial.h"
-#include "BluePillIO.h"
+#include "JACDACFeatherIO.h"
 #include "CodalFiber.h"
 #include "MessageBus.h"
 
@@ -65,19 +65,19 @@ DEALINGS IN THE SOFTWARE.
  */
 namespace codal
 {
-    class BluePill : public CodalComponent
+    class JACDACFeather : public CodalComponent
     {
         public:
             STMLowLevelTimer lowLevel;
             Timer         timer;
             MessageBus                  messageBus;
-            BluePillIO                  io;
+            JACDACFeatherIO                  io;
             ZSPI                        spi;
 
             /**
              * Constructor.
              */
-            BluePill();
+            JACDACFeather();
 
             /**
              * Post constructor initialisation method.
@@ -136,7 +136,7 @@ namespace codal
      * @return MICROBIT_OK on success, MICROBIT_INVALID_PARAMETER milliseconds is less than zero.
      *
      */
-    inline void BluePill::sleep(uint32_t milliseconds)
+    inline void JACDACFeather::sleep(uint32_t milliseconds)
     {
         fiber_sleep(milliseconds);
     }
@@ -148,13 +148,13 @@ namespace codal
      *
      * @note This will value overflow after 1.6 months.
      */
-    inline unsigned long BluePill::systemTime()
+    inline unsigned long JACDACFeather::systemTime()
     {
         return system_timer_current_time();
     }
 }
 
-void BluePill_dmesg_flush();
+void JACDACFeather_dmesg_flush();
 
 using namespace codal;
 

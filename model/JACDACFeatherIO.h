@@ -22,8 +22,8 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 */
 
-#ifndef BIG_BluePill_IO_H
-#define BIG_BluePill_IO_H
+#ifndef JACDAC_FEATHER_IO_H
+#define JACDAC_FEATHER_IO_H
 
 #include "CodalConfig.h"
 #include "ZPin.h"
@@ -46,7 +46,7 @@ namespace codal
     /**
      * Represents a collection of all I/O pins exposed by the device.
      */
-    class BluePillIO
+    class JACDACFeatherIO
     {
         public:
             ZPin pa[0];
@@ -89,7 +89,7 @@ namespace codal
             /**
              * Constructor.
              */
-            BluePillIO();
+            JACDACFeatherIO();
     };
 }
 

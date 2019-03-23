@@ -28,7 +28,7 @@ DEALINGS IN THE SOFTWARE.
  */
 
 #include "CodalConfig.h"
-#include "BluePillIO.h"
+#include "JACDACFeatherIO.h"
 
 using namespace codal;
 
@@ -40,7 +40,7 @@ using namespace codal;
  * Accepts a sequence of unique ID's used to distinguish events raised
  * by MicroBitPin instances on the default EventModel.
  */
-BluePillIO::BluePillIO()
+JACDACFeatherIO::JACDACFeatherIO()
     : pa0(ID_PIN_PA0 + 0, PA_0, PIN_CAPABILITY_DIGITAL),
       pa1(ID_PIN_PA0 + 1, PA_1, PIN_CAPABILITY_DIGITAL),
       pa2(ID_PIN_PA0 + 2, PA_2, PIN_CAPABILITY_DIGITAL),
@@ -73,7 +73,7 @@ BluePillIO::BluePillIO()
       pb13(ID_PIN_PB0 + 13, PB_13, PIN_CAPABILITY_DIGITAL),
       pb14(ID_PIN_PB0 + 14, PB_14, PIN_CAPABILITY_DIGITAL),
       pb15(ID_PIN_PB0 + 15, PB_15, PIN_CAPABILITY_DIGITAL),
-      led(ID_PIN_PC0 + 13, PC_13, PIN_CAPABILITY_DIGITAL)
+      led(pb13)
 
 {
 }

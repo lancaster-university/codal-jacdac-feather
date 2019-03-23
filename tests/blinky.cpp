@@ -1,16 +1,16 @@
-#include "BluePill.h"
+#include "JACDACFeather.h"
 
-BluePill bp;
+JACDACFeather feather;
 
 int main()
 {
-    bp.init();
+    feather.init();
 
     int state = 0;
 
     while(1)
     {
-        bp.io.ledRed.setDigitalValue(state);
+        feather.io.led.setDigitalValue(state);
         fiber_sleep(1000);
         state = !state;
     }

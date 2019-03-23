@@ -23,12 +23,12 @@ DEALINGS IN THE SOFTWARE.
 */
 
 
-#include "BluePill.h"
+#include "JACDACFeather.h"
 #include "Timer.h"
 
 using namespace codal;
 
-static BluePill *device_instance = NULL;
+static JACDACFeather *device_instance = NULL;
 
 /**
   * Constructor.
@@ -36,7 +36,7 @@ static BluePill *device_instance = NULL;
   * Create a representation of a GenuinoZero device, which includes member variables
   * that represent various device drivers used to control aspects of the micro:bit.
   */
-BluePill::BluePill() :
+JACDACFeather::JACDACFeather() :
     lowLevel(TIM4, TIM4_IRQn),
     timer(lowLevel),
     messageBus(),
@@ -64,7 +64,7 @@ BluePill::BluePill() :
   * @note This method must be called before user code utilises any functionality
   *       contained within the GenuinoZero class.
   */
-int BluePill::init()
+int JACDACFeather::init()
 {
     if (status & DEVICE_INITIALIZED)
         return DEVICE_NOT_SUPPORTED;
@@ -83,7 +83,7 @@ int BluePill::init()
     // Seed our random number generator
     //seedRandom();
 
-    // codal_dmesg_set_flush_fn(BluePill_dmesg_flush);
+    // codal_dmesg_set_flush_fn(JACDACFeather_dmesg_flush);
     status |= DEVICE_COMPONENT_STATUS_IDLE_TICK;
 
 
@@ -95,11 +95,11 @@ int BluePill::init()
   * We use this for any low priority, backgrounf housekeeping.
   *
   */
-void BluePill::idleCallback()
+void JACDACFeather::idleCallback()
 {
     // codal_dmesg_flush();
 }
 
-void BluePill_dmesg_flush()
+void JACDACFeather_dmesg_flush()
 {
 }
