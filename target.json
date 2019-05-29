@@ -1,5 +1,5 @@
 {
-    "device":"JACDAC",
+    "device":"STM32",
     "processor":"STM32F1",
     "architecture":"CORTEX_M3",
     "toolchain":"ARM_GCC",
