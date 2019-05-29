@@ -37,11 +37,14 @@ static JACDACFeather *device_instance = NULL;
   * that represent various device drivers used to control aspects of the micro:bit.
   */
 JACDACFeather::JACDACFeather() :
-    lowLevel(TIM4, TIM4_IRQn),
-    timer(lowLevel),
+    tim2(TIM2, TIM2_IRQn),
+    tim4(TIM4, TIM4_IRQn),
+    timer(tim4),
     messageBus(),
     io(),
-    spi(io.mosi, io.miso, io.sck),
+    sws(io.jacdac),
+    // bus(sws, tim2, &io.ledRed),
+    // jacdac(bus),
     buttonA(io.buttonA, DEVICE_ID_BUTTON_A)
   {
     // Clear our status

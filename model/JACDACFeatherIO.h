@@ -50,27 +50,27 @@ namespace codal
     {
         public:
             ZPin pins[0];
-            ZPin a0;
-            ZPin a1;
-            ZPin a2;
-            ZPin a3;
-            ZPin a4;
-            ZPin a5;
-            ZPin sck;
-            ZPin mosi;
-            ZPin miso;
+            // ZPin a0;
+            // ZPin a1;
+            // ZPin a2;
+            // ZPin a3;
+            // ZPin a4;
+            // ZPin a5;
+            // ZPin sck;
+            // ZPin mosi;
+            // ZPin miso;
             ZPin rx;
             ZPin tx;
             ZPin jacdac;
-            ZPin sda;
-            ZPin scl;
-            ZPin d5;
-            ZPin d6;
-            ZPin d9;
-            ZPin d10;
-            ZPin d11;
-            ZPin d12;
-            ZPin d13;
+            // ZPin sda;
+            // ZPin scl;
+            // ZPin d5;
+            // ZPin d6;
+            // ZPin d9;
+            // ZPin d10;
+            // ZPin d11;
+            // ZPin d12;
+            // ZPin d13;
 
             ZPin ledRed;
             ZPin ledGreen;

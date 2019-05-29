@@ -189,3 +189,10 @@ MBED_WEAK const PinMap PinMap_CAN_TD[] = {
     {PB_9 , CAN1_BASE, STM_PIN_DATA(STM_MODE_AF_PP, GPIO_NOPULL, 10)}, // Remap CAN_TX to PB_9
     {NC,    NC,    0}
 };
+
+
+MBED_WEAK const PinMap PinMap_USB[] = {
+    {PA_11, CAN1_BASE, STM_PIN_DATA(STM_MODE_INPUT, GPIO_NOPULL, 0)},
+    {PA_12, CAN1_BASE, STM_PIN_DATA(STM_MODE_AF_PP, GPIO_NOPULL, 0)},
+    {NC,    NC,    0}
+};

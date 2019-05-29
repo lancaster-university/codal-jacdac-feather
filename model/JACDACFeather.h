@@ -32,6 +32,7 @@ DEALINGS IN THE SOFTWARE.
 #include "Timer.h"
 #include "STMLowLevelTimer.h"
 #include "CodalCompat.h"
+#include "CodalUSB.h"
 #include "CodalComponent.h"
 #include "CodalDmesg.h"
 #include "ManagedType.h"
@@ -49,10 +50,10 @@ DEALINGS IN THE SOFTWARE.
 #include "ZPWM.h"
 #include "Synthesizer.h"
 #include "Mixer.h"
-#include "JackRouter.h"
 
 #include "ZSingleWireSerial.h"
 #include "ZSPI.h"
+#include "JACDAC.h"
 
 // Status flag values
 #define DEVICE_INITIALIZED                    0x01
@@ -68,11 +69,14 @@ namespace codal
     class JACDACFeather : public CodalComponent
     {
         public:
-            STMLowLevelTimer            lowLevel;
+            STMLowLevelTimer            tim2;
+            STMLowLevelTimer            tim4;
             Timer                       timer;
             MessageBus                  messageBus;
             JACDACFeatherIO             io;
-            ZSPI                        spi;
+            ZSingleWireSerial           sws;
+            // JDPhysicalLayer             bus;
+            // JACDAC                      jacdac;
             Button                      buttonA;
 
             /**
