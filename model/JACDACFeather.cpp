@@ -43,8 +43,8 @@ JACDACFeather::JACDACFeather() :
     messageBus(),
     io(),
     sws(io.jacdac),
-    // bus(sws, tim2, &io.ledRed),
-    // jacdac(bus),
+    bus(sws, tim2, &io.ledGreen, &io.ledBlue),
+    jacdac(bus),
     buttonA(io.buttonA, DEVICE_ID_BUTTON_A)
   {
     // Clear our status

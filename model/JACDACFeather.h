@@ -75,8 +75,8 @@ namespace codal
             MessageBus                  messageBus;
             JACDACFeatherIO             io;
             ZSingleWireSerial           sws;
-            // JDPhysicalLayer             bus;
-            // JACDAC                      jacdac;
+            JDPhysicalLayer             bus;
+            JACDAC                      jacdac;
             Button                      buttonA;
 
             /**
